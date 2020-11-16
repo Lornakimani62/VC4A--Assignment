@@ -1,0 +1,178 @@
+// Variables
+$reply-body-gap-x :1.25rem;
+$reply-body-gap-x-tab :2.25rem;
+$reply-body-gap-x-dsk :2.5rem;
+
+// Reply of Messages
+//////////////////////////////
+.nk-reply {
+    height: 100%;
+    max-height: 100%;
+    overflow: auto;
+    &-item{
+        padding: 2rem $reply-body-gap-x;
+        + .nk-reply-item{
+            padding-top: 0;
+        }
+        
+        > div:not(.nk-reply-header){
+            margin-left: 48px;
+        }
+    }
+    &-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        .user-name{
+            margin-left: 1rem;
+            font-size: .875rem;
+            span{
+                color: $base-light;
+                font-weight: $fw-normal;
+            }
+        }
+        .date-time{
+            color: $base-light;
+            font-size: $fx-sz-12;
+        }
+    }
+    &-entry{
+        &.note{
+            background: $lighter;
+            padding: 1.25rem;
+            border-radius: $border-radius;
+        }
+    }
+    &-from{
+        margin-top: 1.25rem;
+        padding: .375rem .75rem;
+        background: $lighter;
+        border-radius: $border-radius;
+        display: inline-block;
+        font-size: $fx-sz-13;
+    }
+    &-meta{
+        overflow: hidden;
+        text-align: center;
+        margin:0 $reply-body-gap-x;
+        padding: 0 2rem;
+        &-info {
+            position: relative;
+            display: inline-block;
+            padding: 0 .75rem;
+            color: $base-light;
+            font-size: $fx-sz-13;
+            line-height: 1.4;
+            span,strong, .who{
+                color:$base-text;
+            }
+            .whom {
+                color: $accent-color;
+            }
+            &:before,&:after{
+                position: absolute;
+                height: 1px;
+                background: $border-light;
+                content: '';
+                width: 100vw;
+                top: 50%;
+            }
+            &:before{
+                right: 100%;
+            }
+            &:after{
+                left: 100%;
+            }
+        }
+    }
+    &-form {
+        border-top: 1px solid $border-light;
+        &-editor{
+        }
+        &-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:0 1.25rem;
+            border-bottom: 1px solid $border-light;
+        }
+        &-title{
+            display: flex;
+            align-items: center;
+            .title{
+                color:$base-light;
+                margin-right: .75rem;
+            }
+        }
+        &-field{
+            padding:.5rem 1.25rem;
+            .form-control{
+                min-height: 78px;
+            }
+        }
+        &-tools{
+            padding: 1rem 1.25rem;
+            border-top: 1px solid $border-light;
+            display: flex;
+            justify-content: space-between;
+        }
+        &-actions{
+            display: inline-flex;
+            align-items: center;
+            li{
+                a:not(.btn){
+
+                }
+            }
+        }
+        &-options{
+            display: inline-flex;
+        }
+    }
+}
+
+
+@include media-breakpoint-up(sm){
+    .nk-reply {
+        &-form {
+            margin: .5rem $reply-body-gap-x-tab $reply-body-gap-x-tab;
+            border: 1px solid $border-light;
+            border-radius: $border-radius;
+            &-header{
+                padding:0 1.5rem;
+            }
+            &-field{
+                padding:.5rem 1.5rem;
+            }
+            &-tools{
+                padding: 1rem 1.5rem;
+            }
+        }
+        &-item{
+            padding: 2rem $reply-body-gap-x-tab;
+        }
+        &-meta{
+            margin:0 $reply-body-gap-x-tab;
+        }
+        &-header{
+            .date-time{
+                font-size: $fx-sz-13;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg){
+    .nk-reply {
+        &-form {
+            margin: .5rem $reply-body-gap-x-dsk $reply-body-gap-x-dsk;
+        }
+        &-item{
+            padding: 2rem $reply-body-gap-x-dsk;
+        }
+        &-meta{
+            margin:0 $reply-body-gap-x-dsk;
+        }
+    }
+}
