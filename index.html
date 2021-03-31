@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VC4A - Frontend Assignment</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <header class="header">
+    </header>
+    <div class="bar">
+        <div class="bar__content u-centered">
+            <img class="bar__logo" src="images/vc4a.png" alt="VC4A">
+            <input type="checkbox" name="" id="inputNavToggle">
+            <label class="bar__nav-toggle" for="inputNavToggle">
+                <i onclick="openNav()" class="material-icons bar__nav--icon">menu</i>
+            </label>
+            <nav class="nav" id="navigation">
+            <div class="close" onclick="closeNav()"><i class="material-icons bar__nav--icon--close" style="cursor: pointer;">close</i></div>
+                <a class="nav__link" href="#" onclick="ToggleExplore()" style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-top: 70px;">Explore <i onclick="ToggleExplore()" class="material-icons bar__nav--icon">expand_more</i></a>
+                <div class="nav__link--explore" style="display: none;" id="nav__link--explore">
+                    <ul>
+                        <li class="nav__list__item"><a href="" class="nav__list__item--anchor">Ventures</a></li>
+                        <li class="nav__list__item"><a href="" class="nav__list__item--anchor">Programs</a></li>
+                        <li class="nav__list__item"><a href="" class="nav__list__item--anchor">Events</a></li>
+
+                    </ul>
+                </div>
+                <div class="nav__link--explore--desktop" id="nav__link--explore--desktop">
+                    <ul>
+                        <li class="nav__list__item"><img class="nav-icon" src="images/brief.png" alt=""><a href="" class="nav__list__item--anchor">Ventures</a><p>Explore business ventures in many sectors and countries</p></li>
+                        <li class="nav__list__item"><img class="nav-icon"  src="images/box.png" alt=""><a href="" class="nav__list__item--anchor">Programs</a><p>Find support programs and opportunities for entreprenuers</p></li>
+                        <li class="nav__list__item"><img class="nav-icon" src="images/events.png" alt=""><a href="" class="nav__list__item--anchor">Events</a><p>View all upcoming events for entreprenuers and venture owner</p></li>
+
+                    </ul>
+                </div>
+                <a class="nav__link" href="#" onclick="ToggleLearn()">Learn <i class="material-icons bar__nav--icon">expand_more</i></a>
+                <div class="nav__link--learn" style="display: none;" id="nav__link--learn" type="submit">
+                    <ul>
+                        <li class="nav__list__item"><a href="" class="nav__list__item--anchor">Academy</a></li>
+                        <li class="nav__list__item"><a href="" class="nav__list__item--anchor">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="nav__link--learn--desktop" id="nav__link--learn--desktop">
+                    <ul>
+                        <li class="nav__list__item"><img class="nav-icon" src="images/book.png" alt=""><a href="" class="nav__list__item--anchor">Academy</a><p>Access the leading online resource for startup founders</p></li>
+                        <li class="nav__list__item"><img class="nav-icon"  src="images/Blog.png" alt=""><a href="" class="nav__list__item--anchor">Blog</a><p>Learn and keep in tune with startup related issues and news</p></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="call-to-action">
+                <button class="call-to-action__button" type="submit">Sign In</button>
+            </div>
+
+        </div>
+    </div>
+    <script type='text/javascript' src="script.js"></script>
+</body>
+
+</html>
