@@ -1,0 +1,222 @@
+:root{
+    --bar-height: 72px;
+    --color-primary:#FFFFFF;
+    --color-primary-light:#FFFFFF;
+}
+
+.header{
+    height: 100vh;
+    background: #F6F6F6;
+    display: flex;
+    align-items: center;
+    padding-top: var(--bar-height);
+    box-sizing: border-box;
+}
+
+.u-centered{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.bar{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height:72px;
+    background: #FFFFFF;
+}
+
+
+
+.bar__content{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 5rem;
+    padding-top: 1rem;
+}
+
+.bar__logo{
+    height: 30%;
+    position: absolute;
+    float: left;
+    left: 2rem;
+    margin: -20px -20px;
+}
+
+.bar__logo img{
+    max-width: 50% !important;
+}
+
+.bar__nav-toggle{
+    cursor: pointer;
+}
+
+.bar__nav-toggle i{
+    font-size: 2rem;
+}
+
+.nav{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 32px;
+    background: #009083;
+    box-sizing: border-box;
+    transition-property:all;
+    transition-duration: 10s;
+    transition-timing-function: linear; 
+    transition-delay: 10s;
+}
+
+.nav.clicked{
+    background: #009083;
+    
+}
+
+
+
+#inputNavToggle{
+    display: none;
+}
+
+.nav__link{
+    font-weight: 500;
+    padding: 16px 0;
+    text-decoration: none;
+    color: #FFFFFF;
+    ;
+}
+
+
+.nav__list__item--anchor{
+    padding: 16px 0;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.close{
+    color: #FFFFFF;
+    position: absolute;
+    right:1rem; 
+}
+.nav__link--explore .nav__link--learn{
+    display: none;
+}
+
+.nav__list__item{
+    padding: 10px;
+    list-style-type: none;
+    margin:0 0 15px 0;
+    border-bottom: 1.5px solid rgba(255,255,255,0.1);
+}
+
+.nav__link i{
+    vertical-align: middle;
+}
+
+.nav_link:hover{
+    opacity: 0.8;
+}
+
+.call-to-action__button{
+    background: #009083;
+    outline: none;
+    color: var(--color-primary);
+    border: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+.bar__nav--icon{
+    position: absolute; 
+    float: right;
+    right: 2rem;
+    margin: -10px -16px;
+    }
+
+@media screen and (min-width: 767px){
+    .bar__nav-toggle{
+        display: none;
+    }
+    .nav{
+        display: initial;
+        position: static;
+        width: unset;
+        height: unset;
+        padding: unset;
+        background: transparent;
+    }
+    .nav__link{
+        border-bottom: none;
+        font-weight: 1000;
+        color: black
+    }
+    
+    .nav__link i{
+        vertical-align: middle;
+    }
+    .nav__link:not(:last-of-type){
+        margin-right: 24px;
+
+    }
+    .call-to-action__button{
+        background: #009083;
+        outline: none;
+        color: var(--color-primary);
+        border: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        border-radius: 4px;
+        padding: 10px 16px;
+        cursor: pointer;
+    }
+    .nav__list__item--anchor{
+        padding: 16px 0;
+        text-decoration: none;
+        color: black;
+    }
+    .bar__logo{
+        height: 45%;
+        position: absolute;
+        float: left;
+        left: 2rem;
+        margin: 45px;
+    }
+    .bar__nav--icon{
+        position: static; 
+        float: unset;
+        right: unset;
+        margin: unset;
+        }
+    .nav__link--explore--desktop ,.nav__link--learn--desktop{
+        display: none;
+        position: absolute;
+        background-color: white;
+        max-width: 350px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        padding-left: 5rem;
+        color: gray;
+    }
+    
+    .nav-icon{
+        position: absolute; 
+        float: left;
+        left: 2rem;
+        vertical-align: middle;
+        height: 12%;
+    }
+    .nav__list__item--anchor{
+        font-weight: bold;
+    }
+}
